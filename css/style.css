@@ -1,0 +1,774 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+
+}
+
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+
+/*desktop size start*/
+/*landing page section start*/
+.landing-page{
+	background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../img/bg.jpg);
+	height: 100vh;
+	background-size: cover;
+}
+
+/*header section end*/
+header{
+	padding: 10px 50px;
+}
+header nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header nav .wrapper {
+	display: flex;
+	align-items: center;
+}
+header nav .menu-icon{
+	display: none;
+}
+header nav .menu-icon .bar-1, .bar-2, .bar-3{
+	width: 35px;
+	height: 5px;
+	background-color: #fff;
+	margin: 6px 0;
+}
+
+.logo-sec a{
+	color: #fff;
+	font-size: 50px;
+	font-weight: 700;
+}
+.logo-sec a span{
+	color: #e2576a;
+}
+.menu-sec ul {
+	display: flex;
+}
+.menu-sec ul li{
+	margin-right: 25px;
+	font-size: 25px;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: #fff;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.menu-sec ul li.active{
+	color: #e2576a;
+}
+.menu-sec ul li:hover{
+	color: #e2576a;
+}
+/*header section end*/
+.banner{
+	text-align: center;
+	margin-top: 200px;
+}
+.banner h4{
+	text-transform: capitalize;
+	font-weight: 600;
+	color: #fff;
+	font-size: 50px;
+}
+.banner .dynamic-text{
+	overflow: hidden;
+	height: 180px;
+}
+.banner .dynamic-text li {
+	text-transform: capitalize;
+	color: #e2576a;
+	font-size: 150px;
+	font-weight: 600;
+	animation: sliding 6s infinite;
+}
+@keyframes sliding{
+	10%{
+		transform: translateY(-112%);
+	}
+	25%{
+		transform: translateY(-100%);
+	}
+	35%{
+		transform: translateY(-212%);
+	}
+	50%{
+		transform: translateY(-200%);
+	}
+	60%{
+		transform: translateY(-312%);
+	}
+	75%{
+		transform: translateY(-300%);
+	}
+	85%{
+		transform: translateY(-412%);
+	}
+	100%{
+		transform: translateY(-400%);
+	}
+}
+.banner .box{
+	margin-top: 10px;
+}
+.banner .box svg{
+	color: #fff;
+	font-size: 50px;
+	border: 1px solid #fff;
+	padding: 30px;
+	border-radius: 50%;
+	cursor: pointer;
+	margin-right: 15px;
+	transition: all 0.3s ease;
+}
+.banner .box svg:hover{
+	background: #fff;
+	color: #e2576a;
+}
+.banner .box .facebook{
+	padding: 30px 35px 30px 36px;
+}
+/*landing page section end*/
+
+/*portfolio section start*/
+.portfolio{
+	padding-bottom: 50px;
+}
+.portfolio .title{
+	text-align: center;
+	padding: 50px 0 10px 0;
+	position: relative;
+}
+.portfolio .title h3{
+	text-transform: capitalize;
+	font-size: 35px;
+}
+.portfolio .title .bottom-border{
+	border: 3px solid #e2576a;
+	position: absolute;
+	width: 150px;
+	border-radius: 15px;
+	top: 100px;
+	left: 46%
+}
+.portfolio .title p{
+	font-size: 25px;
+	margin-top: 30px;
+	color: #808080;
+}
+
+.portfolio .person-data{
+	display: flex;
+	margin-top: 30px;
+}
+.portfolio .person-data .img-sec{
+	width: 50%;
+	text-align: center;
+}
+.portfolio .person-data .img-sec img{
+	height: 100%;
+	width: 70%;
+}
+.portfolio .person-data .person-details{
+	width: 50%;
+}
+.portfolio .person-data .person-details h2{
+	font-size: 35px;
+}
+.portfolio .person-data .person-details h2, p{
+	text-transform: capitalize;
+}
+.portfolio .person-data .person-details p{
+	margin-top: 20px;
+	color: #808080;
+}
+.portfolio .person-data .person-details button{
+	text-transform: uppercase;
+	padding: 10px 35px;
+	font-size: 25px;
+	border-radius: 35px;
+	border: 2px solid #e2576a;
+	background: no-repeat;
+	font-weight: 800;
+	font-family: 'Montserrat', sans-serif;
+	margin-top: 25px;
+	position: relative;
+	transition: all 0.3s ease;
+	overflow: hidden;
+}
+.portfolio .person-data .person-details button::before{
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	background: #e2576a;
+	height: 100%;
+	width: 0;
+	transition: all 0.3s ease;
+}
+.portfolio .person-data .person-details button:hover::before{
+	width: 100%;
+	z-index: -1;
+}
+.portfolio .person-data .person-details button:hover{
+	color: #fff;
+}
+/*portfolio section end*/
+
+/*what i do section start*/
+.what-i-do{
+	background: #eee;
+	padding: 50px 0 150px 0;
+}
+.what-i-do .title{
+	text-align: center;
+	padding: 50px 0 10px 0;
+	position: relative;
+}
+.what-i-do .title h3{
+	text-transform: capitalize;
+	font-size: 35px;
+}
+.what-i-do .title .bottom-border{
+	border: 3px solid #e2576a;
+	position: absolute;
+	width: 150px;
+	border-radius: 15px;
+	top: 100px;
+	left: 46%
+}
+.what-i-do .title p{
+	margin-top: 30px;
+	font-size: 25px;
+	color: #808080;
+}
+.what-i-do .qualities {
+	margin-top: 35px;
+}
+.what-i-do .qualities .box{
+	display: grid;
+	grid-row-gap: 20px;
+	grid-template-columns: repeat(3, 475px);
+	justify-content: center;
+	margin-left: 150px;
+}
+.what-i-do .qualities .box .mini-box{
+	border: 1px solid #6f6f6f;
+	text-align: center;
+	width: 58%;
+	padding: 15px 15px;
+	transition: all 0.7s ease;
+}
+.what-i-do .qualities .box .mini-box:hover{
+	background: #fff;
+	border: none;
+}
+.what-i-do .qualities .box .mini-box .icon{
+	margin: 10px 0 25px 0;
+}
+.what-i-do .qualities .box .mini-box .icon svg{
+	font-size: 30px;
+	color: #e2576a;
+}
+.what-i-do .qualities .box .mini-box .name{
+	margin: 10px 0;
+}
+.what-i-do .qualities .box .mini-box .name h3{
+	text-transform: capitalize;
+	font-weight: 600;
+}
+.what-i-do .qualities .box .mini-box .details p{
+	color: #6f6f6f;
+}
+/*what i do section end*/
+
+/*recent projects section start*/
+.recent-project .title{
+	text-align: center;
+	padding: 50px 0 10px 0;
+	position: relative;
+}
+.recent-project .title h3{
+	text-transform: capitalize;
+	font-size: 35px;
+}
+.recent-project .title .bottom-border{
+	border: 3px solid #e2576a;
+	position: absolute;
+	width: 150px;
+	border-radius: 15px;
+	top: 100px;
+	left: 46%
+}
+.recent-project .title p{
+	margin-top: 30px;
+	color: #808080;
+	font-size: 25px;
+}
+.recent-project .selective-menu ul{
+	display: flex;
+	justify-content: center;
+}
+.recent-project .selective-menu ul li{
+	cursor: pointer;
+	text-transform: capitalize;
+	margin-right: 50px;
+	font-size: 30px;
+	font-weight: 600;
+	position: relative;
+}
+.recent-project .selective-menu ul li.active:after{
+	position: absolute;
+	content: '';
+	border: 1px solid #e2576a;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+.recent-project .items{
+	margin-top: 30px;
+}
+.recent-project .items .box{
+	display: grid;
+	grid-template-columns: repeat(3, 555px);
+	justify-content: center;
+	grid-gap: 15px;
+	padding: 0 0 0 25px;
+}
+.recent-project .items .box .mini-box {
+	height: 250px;
+	width: 500px;
+}
+.recent-project .items .box .mini-box.hide{
+	display: none;
+}
+.recent-project .items .box .mini-box:hover{
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+}
+.recent-project .items .box .mini-box img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+/*recent projects section end*/
+
+/*freelancer section start*/
+.freelancer{
+	text-align: center;
+	text-transform: capitalize;
+	padding: 110px 0;
+}
+
+.freelancer h2{
+	margin-bottom: 20px;
+	font-size: 35px;
+}
+.freelancer p{
+	color: #808080;
+	margin-bottom: 20px;
+}
+.freelancer button{
+	text-transform: capitalize;
+	font-size: 30px;
+	font-weight: 600;
+	font-family: 'Montserrat', sans-serif;
+	padding: 10px 50px;
+	border-radius: 35px;
+	border: 3px solid #e2576a;
+	background: none;
+	transition: 0.3s all;
+}
+.freelancer button:hover{
+	background: #e2576a;
+	color: #fff;
+}
+/*freelancer section start*/
+
+/*news feed section start*/
+.news-feed{
+	background: #eeeeee;
+	padding: 50px 0;
+}
+.news-feed .title{
+	text-align: center;
+	padding: 0 0 50px 0;
+	position: relative;
+}
+.news-feed .title h3{
+	text-transform: capitalize;
+	font-size: 35px;
+}
+.news-feed .title .bottom-border{
+	border: 3px solid #e2576a;
+	position: absolute;
+	width: 100px;
+	border-radius: 15px;
+	top: 50px;
+	left: 47.5%
+}
+.news-feed .title p{
+	margin-top: 30px;
+	font-size: 25px;
+	color: #808080;
+}
+.news-feed .row{
+	display: flex;
+}
+.news-feed .row .col{
+	width: 29%;
+	margin: auto;
+}
+.news-feed .row .col:hover h2{
+	color: #e2576a;
+}
+.news-feed .row .col:hover a svg{
+	margin-right: 5px;
+}
+.news-feed .row .col img{
+	width: 100%;
+	object-fit: cover;
+}
+.news-feed .row .col .text-sec{
+	padding: 0 25px;
+	text-transform: capitalize;
+}
+.news-feed .row .col .text-sec h5{
+	margin: 10px 0;
+	color: #808080;
+	font-weight: 500;
+	font-size: 16px;
+}
+.news-feed .row .col .text-sec h2{
+	font-weight: 500;
+	margin-bottom: 15px;
+	transition: 0.3s ease;
+}
+.news-feed .row .col .text-sec p{
+	font-weight: 500;
+	color: #808080;
+	margin-bottom: 15px;
+}
+.news-feed .row .col .text-sec a{
+	display: flex;
+	align-items: center;
+	color: #e2576a;
+}
+.news-feed .row .col .text-sec a svg{
+	transition: 0.3s ease;
+}
+/*news feed section end*/
+
+/*contact section start*/
+.contact{
+	padding: 50px 0;
+}
+.contact .title{
+	text-align: center;
+	padding: 0 0 50px 0;
+	position: relative;
+}
+.contact .title h3{
+	text-transform: capitalize;
+	font-size: 35px;
+}
+.contact .title .bottom-border{
+	border: 3px solid #e2576a;
+	position: absolute;
+	width: 100px;
+	border-radius: 15px;
+	top: 50px;
+	left: 47.4%
+}
+.contact .title p{
+	margin-top: 30px;
+	color: #808080;
+	font-size: 25px;
+}
+.contact form{
+	display: inline-grid;
+	padding: 0 700px;
+}
+.contact form input{
+	width: 500px;
+	padding: 20px 10px;
+	font-size: 25px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	text-align: center;
+}
+.contact form textarea{
+	border-top: none;
+	border-left: none;
+	border-right: none;	
+	padding: 15px 10px;
+	height: 50px;
+	font-size: 25px;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+}
+.contact form button{
+	width: 160px;
+	padding: 10px 0;
+	border-radius: 30px;
+	margin-top: 15px;
+	border: 3px solid #e2576a;
+	background : none;
+	font-weight: 700;
+	font-family: 'Montserrat', sans-serif;
+	transform: translateX(115%);
+	transition: 0.3s;
+}
+.contact form button:hover{
+	background: #e2576a;
+	color: #fff;
+}
+/*contact section end*/
+
+/*footer section start*/
+footer{
+	padding: 50px 0;
+	background: #000;
+	text-align: center;
+}
+footer span{
+	font-size: 20px;
+	color: #fff;
+}
+footer span a{
+	color: #e2576a;
+}
+/*footer section end*/
+/*desktop size end*/
+
+/*laptop size start*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1440px){
+	/*banner section start*/
+	header nav .menu-icon{
+		display: none;
+	}
+	.logo-sec a {
+		font-size: 25px;
+	}
+	.menu-sec ul li{
+		font-size: 16px;
+	}
+	.banner {
+		margin-top: 135px;
+	}
+	.banner h4{
+		font-size: 25px;
+	}
+	.banner .box svg{
+		font-size: 25px;
+		padding: 20px;
+	}
+	.banner .box svg.facebook{
+		padding: 19px 25px 20px 26px;
+	}
+	/*banner section end*/
+
+	/*portfolio section start*/
+	.portfolio {
+		padding: 0 50px 50px 0;
+	}
+	/*portfolio section end*/
+
+	/*what i do section start*/
+	.what-i-do .title h3{
+		font-size: 25px;
+	}
+	.what-i-do .title .bottom-border {
+		border: 1px solid #e2576a;
+		top: 90px;
+		width: 100px;
+	}
+	.what-i-do .title p{
+		font-size: 16px;
+	}
+	.what-i-do .qualities .box {
+		grid-template-columns: repeat(3, 400px);
+	}
+	/*what i do section end*/
+
+
+	/*recent project section start*/
+	.recent-project .title h3{
+		font-size: 25px;
+	}
+	.recent-project .title .bottom-border {
+		border: 1px solid #e2576a;
+		top: 90px;
+		width: 100px;
+	}
+	.recent-project .title p{
+		font-size: 16px;
+	}
+	.recent-project .selective-menu ul li {
+		margin-right: 30px;
+		font-size: 18px;
+	}
+	.recent-project .items .box {
+		grid-template-columns: repeat(3, 400px);
+	}
+	.recent-project .items .box .mini-box {
+		height: 235px;
+		width: 370px;
+	}
+	/*recent project section end*/
+
+	/*freelancer section start*/
+	.freelancer h2 {
+		font-size: 20px; 
+	}
+	.freelancer button{
+		font-size: 15px;
+		padding: 10px 30px;
+	}
+	/*freelancer section end*/
+
+	/*news-feed section start*/
+	.news-feed .title h3{
+		font-size: 25px;
+	}
+	.news-feed .title .bottom-border {
+		border: 1px solid #e2576a;
+		width: 100px;
+		top: 40px;
+		left: 46.3%;
+	}
+	.news-feed .title p{
+		font-size: 16px;
+	}
+	/*news-feed section end*/
+
+	/*contact section start*/
+	.contact .title h3{
+		font-size: 25px;
+	}
+	.contact .title .bottom-border {
+		border: 1px solid #e2576a;
+		top: 40px;
+		width: 100px;
+		left: 46.4%;
+	}
+	.contact .title p{
+		font-size: 16px;
+	}
+	.contact form {
+		display: inline-grid;
+		padding: 0 325px;
+	}
+	.contact form input{
+		font-size: 15px;
+	}
+	.contact form textarea{
+		font-size: 15px;
+	}
+	/*contact section end*/
+}
+/*laptop size end*/
+
+/*tablet size start*/
+@media only screen and (min-device-width: 540px) and (max-device-width: 1024px){
+	.bottom-border{
+		display: none;
+	}
+	.logo-sec a {
+		font-size: 25px;
+	}
+	.landing-page{
+		height: 50vh;
+	}
+	.banner{
+		margin-top: 150px;
+	}
+	.menu-sec ul li {
+		font-size: 15px;
+	}
+	.what-i-do .qualities .box {
+		grid-template-columns: repeat(3, 277px);
+	}
+	.recent-project .items .box {
+		grid-template-columns: repeat(3, 293px);
+	}
+	.recent-project .items .box .mini-box {
+		height: 100px;
+		width: 250px;
+	}
+	.contact form {
+		padding: 0 225px;
+	}
+}
+/*tablet size end*/
+
+/*phone size start*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px){
+	.bottom-border{
+		display: none;
+	}
+	.landing-page{
+		height: 50vh;
+	}
+	header nav .wrapper{
+		display: block;
+		position: relative;
+		top: -20px;
+	}
+	header nav .wrapper .menu-icon{
+		position: absolute;
+		display: block;
+		right: 15px;
+	}
+	header nav .wrapper .menu-sec.active{
+		display: none;
+	}
+	header nav .wrapper .menu-sec{
+		position: absolute;
+		right: 0;
+		top: 75px;
+		width: 90vw;
+		height: 93vh;
+		background: #000;
+		z-index: 1;
+	}
+	header nav .wrapper .menu-sec ul{
+		display: block;
+		text-align: center;
+		padding: 150px 0 0 0;
+	}
+	header nav .wrapper .menu-sec ul li{
+		font-size: 50px;
+		margin-bottom: 50px;
+	}
+	.contact form {
+		padding: 0 210px;
+	}
+	.what-i-do .qualities .box {
+		grid-template-columns: repeat(3, 273px);
+	}
+	.recent-project .items .box {
+		grid-template-columns: repeat(2, 465px);
+		padding: 0 0 0 25px;
+	}
+	.recent-project .items .box .mini-box {
+		width: 439px;
+	}
+}
+/*phone size end*/
